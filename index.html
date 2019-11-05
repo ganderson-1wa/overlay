@@ -1,0 +1,115 @@
+<html>
+
+<head>
+  <style>
+
+@import url("https://fonts.googleapis.com/css?family=Barlow");
+
+
+#wrap-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#video-overlays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 1;
+  /* background-color: rgba(255,255,255,.4); */
+}
+#player{
+    width: 100%;
+}
+
+.container {
+  padding: 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 0 32.5%;
+  height: 192px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: rgba(255,255,255,.2);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 2px; /* (100-32*3)/2 */
+  /* background: red; */
+  border: 2px solid rgba(255, 255, 255,.1);
+  background: transparent;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: rgba(255,255,255,1);
+  border: 2px solid rgba(255, 255, 255,.5);
+  background: rgba(255, 255, 255,.1);
+}
+
+</style>
+</head>
+
+<body>
+
+    <div id="wrap-video">             
+
+        <iframe src="https://player.vimeo.com/video/350834814?autoplay=1&loop=1&autopause=0&controls=0" width="1280" height="600" frameborder="0" allow="autoplay; fullscreen"></iframe>
+
+             <div id="video-overlays">
+               <div class="container">
+                 <div class="item" id="Q1">
+                   QUADRANT 1
+                 </div>
+                 <div class="item" id="Q2">
+                    QUADRANT 2
+                 </div>
+                 <div class="item" id="Q3">
+                    QUADRANT 3
+                 </div>
+                 <div class="item" id="Q4">
+                    QUADRANT 4
+                 </div>
+                 <div class="item" id="Q5">
+                    QUADRANT 5
+                 </div>
+                 <div class="item" id="Q6">
+                    QUADRANT 6
+                 </div>
+                 <div class="item" id="Q7">
+                    QUADRANT 7
+                 </div>
+                 <div class="item" id="Q8">
+                    QUADRANT 8
+                 </div>
+                 <div class="item" id="Q9">
+                    QUADRANT 9
+                 </div>
+               </div>
+              </div>
+        </div>
+
+</body>
+
+<script>
+document.getElementById('Q1').addEventListener('click', function () { alert("Clicked Quadrant 1"); });
+document.getElementById('Q2').addEventListener('click', function () { alert("Clicked Quadrant 2"); });
+document.getElementById('Q3').addEventListener('click', function () { alert("Clicked Quadrant 3"); });
+document.getElementById('Q4').addEventListener('click', function () { alert("Clicked Quadrant 4"); });
+document.getElementById('Q5').addEventListener('click', function () { alert("Clicked Quadrant 5"); });
+document.getElementById('Q6').addEventListener('click', function () { alert("Clicked Quadrant 6"); });
+document.getElementById('Q7').addEventListener('click', function () { alert("Clicked Quadrant 7"); });
+document.getElementById('Q8').addEventListener('click', function () { alert("Clicked Quadrant 8"); });
+document.getElementById('Q9').addEventListener('click', function () { alert("Clicked Quadrant 9"); });
+</script>
+
+</html>
