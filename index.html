@@ -6,6 +6,8 @@
 
     <style>
 
+      @import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
+
       html {
         font-family: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
@@ -20,22 +22,89 @@
         font-family: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
       }
 
-      .link-video {
 
+      .link-video, .link-video-play, .link-video-restart {
         display: inline-flex;
-        border-radius: 4px;
+        background: rgba(7, 71, 113, .75);
+        color: rgba(7, 71, 113, 1);
+        padding: 6px 16px;
+        border-radius: 2px;
         cursor: pointer;
-        background: rgba(7, 71, 113,1.0);
-        color: #fff;
-        border: none;
-        text-transform: uppercase;
+        transition: background 0.2s ease-in;
         outline: none;
-        padding: 6px 10px;
-        margin: 10px;
-        justify-content: center;
-        align-content: center;
+        border: none;
+        font-family: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
       }
 
+      .link-video-restart {
+        color: rgba(7, 71, 113, 1) !important;
+        background: rgba(7, 71, 113, .15) !important;
+      }
+
+      .link-video i, .link-video-play i, .link-video-restart i {
+        font-size: 10px;
+      }
+      .link-video:hover, .link-video-play:hover, .link-video-restart:hover {
+        color: #fff;
+        background: rgba(7, 71, 113, 1.0);
+        transition: background 0.2s ease-in;
+      }
+      .link-video-play, .link-video-restart {
+        margin: 0 12px;
+        background: rgba(7, 71, 113, .75);
+        color: #fff;
+      }
+      .link-video-play i, .link-video-restart i {
+        font-size: 9px;
+      }
+      .link-video-play:hover {
+        background: rgba(7, 71, 113, 1.0) !important;
+        transition: background 0.2s ease-in;
+      }
+      
+      .link-video-restart:hover {
+        transition: background 0.2s ease-in;
+        color: rgba(7, 71, 113, 1) !important;
+        background: rgba(7, 71, 113, .3) !important;
+      }
+     
+      .slidecontainer {
+        width: 100%; 
+      }
+
+      .slider {
+        -webkit-appearance: none;  
+        appearance: none;
+        width: 100%; 
+        height: 16px; 
+        margin: 20px 0;
+        background: rgba(7, 71, 113, .15); 
+        outline: none;
+        opacity: 0.7; 
+        -webkit-transition: .2s; 
+        transition: opacity .2s;
+      }
+
+      .slider:hover {
+        opacity: 1; 
+      }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 16px; 
+        height: 16px;
+        background: rgba(7, 71, 113, 1.0); 
+        cursor: pointer;
+      }
+
+      .slider::-moz-range-thumb {
+        width: 16px; 
+        height: 16px; 
+        background: rgba(7, 71, 113, 1); 
+        cursor: pointer;
+      }
+ 
       .content {
         position: relative;
         width: 100%;
@@ -72,33 +141,8 @@
         align-items: center !important;
       }
 
-      input[type=range] {
-        -webkit-appearance: none;
-        width: 50%;
-      }
-      input[type=range]:focus {
-        outline: none;
-      }
-      input[type=range]::-webkit-slider-runnable-track {
-        width: 50%;
-        height: 8.4px;
-        cursor: pointer;
-        background: #eee;
-        border-radius: 1.3px;
-        border: 1px solid #ccc;
-      }
-      input[type=range]::-webkit-slider-thumb {
-        border: 1px solid #666;
-        height: 20px;
-        width: 16px;
-        border-radius: 2px;
-        background: #ffffff;
-        cursor: pointer;
-        -webkit-appearance: none;
-        margin-top: -7px;
-      }
-      input[type=range]:focus::-webkit-slider-runnable-track {
-        background: #eee;
+      .controls {
+        padding: 10px;
       }
 
       </style>
@@ -113,22 +157,26 @@
 
     <div id="wrap">
 
-    <fieldset class="js-methods">
+      <fieldset class="js-methods">
 
-      <div class="buttons">
-      <button id="play-button" class="js-method link-video" data-method="play">Play</button>
-      <button id="pause-button" class="js-method link-video" data-method="pause">Pause</button>
-      </div>
+        <div class="controls">
+          
+          <button id="play-button" class="js-method link-video-play" data-method="play"><i class="fas fa-play"></i></button>
+          <button id="pause-button" class="js-method link-video-play" data-method="pause"><i class="fas fa-pause"></i></button>
+          <input id="current-time-input" type="hidden" value="0">
+          <button id="current-time-button" class="link-video-restart"><i class="fas fa-backward"></i></button>
 
-      <div class="value-input">
-      <input id="current-time-range" type="range" min="0" max="100"  value="0">
-      </div>
+          <div class="slidecontainer">
+            <input id="current-time-range" type="range" min="1" max="100" value="0" class="slider">
+          </div>
 
-      <label><input id="loop-checkbox" type="checkbox"> Loop</label>
-
-    </fieldset>
-
+        </div>
+      
+      </fieldset>
+  
     </div>
+
+   
 
     <div class="console"  style="display: none;">
       <p class="output"></p>
