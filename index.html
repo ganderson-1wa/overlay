@@ -22,6 +22,8 @@
         font-family: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
       }
 
+    
+
 
       .link-video, .link-video-play, .link-video-restart {
         display: inline-flex;
@@ -53,9 +55,6 @@
         margin: 0 12px;
         background: rgba(7, 71, 113, .75);
         color: #fff;
-      }
-      .link-video-play i, .link-video-restart i {
-        font-size: 9px;
       }
       .link-video-play:hover {
         background: rgba(7, 71, 113, 1.0) !important;
@@ -119,10 +118,10 @@
       .content:before {
         content: '';
         position: absolute;
-        background-image: url('grid.png');
+        background-image: url('4x4.png');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: cover;
+        background-size: contain;
         opacity: .5;
         width: 100% !important;
         top: 0;
@@ -164,7 +163,7 @@
           <button id="play-button" class="js-method link-video-play" data-method="play"><i class="fas fa-play"></i></button>
           <button id="pause-button" class="js-method link-video-play" data-method="pause"><i class="fas fa-pause"></i></button>
           <input id="current-time-input" type="hidden" value="0">
-          <button id="current-time-button" class="link-video-restart"><i class="fas fa-backward"></i></button>
+          <button id="current-time-button" class="link-video-restart"><i class="fas fa-undo"></i></button>
 
           <div class="slidecontainer">
             <input id="current-time-range" type="range" min="1" max="100" value="0" class="slider">
