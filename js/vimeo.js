@@ -8,9 +8,6 @@ $(function() {
     var currentTimeRange = $('#current-time-range');
     var currentTimeInput = $('#current-time-input');
     var currentTimeButton = $('#current-time-button');
-    var currentTimeRange = $('#current-time-range');
-
-
 
 
     // Create the player
