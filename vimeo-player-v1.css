@@ -122,6 +122,23 @@
         left: 0;
       }
     }
+
+    @media (min-width : 800px) {
+      .content-vimeo:before {
+      content: '';
+      position: absolute;
+      background-image: url('grid.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 820px 760px;
+      opacity: .5;
+      width: 100% !important;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
       
     .js-methods {
       border: none;

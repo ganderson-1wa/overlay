@@ -8,6 +8,10 @@ $(function() {
     var currentTimeRange = $('#current-time-range');
     var currentTimeInput = $('#current-time-input');
     var currentTimeButton = $('#current-time-button');
+    var currentTimeRange = $('#current-time-range');
+
+
+
 
     // Create the player
     var player = new Vimeo.Player($('iframe'));
@@ -26,6 +30,16 @@ $(function() {
 
     currentTimeRange.on('change', function() {
         player.setCurrentTime($(this).val());
+    });
+
+    // Listen for timeupdate to update the time range input
+    player.on('timeupdate', function(data) {
+        currentTimeRange.val(data.seconds);
+    });
+
+    // Also update the time range input on seeked
+    player.on('seeked', function(data) {
+        currentTimeRange.val(data.seconds);
     });
 
     currentTimeButton.on('click', function() {
