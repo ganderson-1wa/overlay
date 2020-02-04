@@ -1,20 +1,6 @@
 
       @import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
 
-      html {
-        font-family: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-
-      body {
-        overflow-x: hidden;
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-
-      input {
-        font-family: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-      }
-
       .link-video, .link-video-play, .link-video-restart {
         display: inline-flex;
         background: rgba(7, 71, 113, .75);
@@ -111,7 +97,7 @@
         background-image: url('grid.png');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 800px 600px;
+        background-size: 720px 576px;
         opacity: .5;
         width: 100% !important;
         top: 0;
@@ -120,14 +106,14 @@
         left: 0;
       }
 
-      @media (max-width : 400px) {
+      @media (max-width : 500px) {
         .content-vimeo:before {
         content: '';
         position: absolute;
         background-image: url('grid.png');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 420px 325px;
+        background-size: 500px 400px;
         opacity: .5;
         width: 100% !important;
         top: 0;
@@ -137,35 +123,16 @@
       }
     }
       
-      @media only screen and (min-width : 401px) and (max-width : 740px) {
-        .content-vimeo:before {
-        content: '';
-        position: absolute;
-        background-image: url('grid.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 640px 480px;
-        opacity: .5;
-        width: 100% !important;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
+    .js-methods {
+      border: none;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      display: flex !important;
+      align-content: center !important;
+      align-items: center !important;
+    }
 
-	}
-
-
-      .js-methods {
-        border: none;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
-        display: flex !important;
-        align-content: center !important;
-        align-items: center !important;
-      }
-
-      .controls {
-        padding: 10px;
-      }
+    .controls {
+      padding: 10px;
+    }
