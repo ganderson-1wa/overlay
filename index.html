@@ -22,9 +22,6 @@
         font-family: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
       }
 
-    
-
-
       .link-video, .link-video-play, .link-video-restart {
         display: inline-flex;
         background: rgba(7, 71, 113, .75);
@@ -104,18 +101,18 @@
         cursor: pointer;
       }
  
-      .content {
+      .content-vimeo {
         position: relative;
         width: 100%;
         margin: 0 auto;
         /* padding: 20px; */
         
       }
-      .content iframe {
+      .content-vimeo iframe {
         display: block;
         width: 100%;
       }
-      .content:before {
+      .content-vimeo:before {
         content: '';
         position: absolute;
         background-image: url('grid.png');
@@ -129,6 +126,41 @@
         bottom: 0;
         left: 0;
       }
+
+      @media (max-width : 500px) {
+        .content-vimeo:before {
+        content: '';
+        position: absolute;
+        background-image: url('grid.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 500px 375px;
+        opacity: .5;
+        width: 100% !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      
+      @media only screen and (min-width : 501px) and (max-width : 740px) {
+        .content-vimeo:before {
+        content: '';
+        position: absolute;
+        background-image: url('grid.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 640px 480px;
+        opacity: .5;
+        width: 100% !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+	}
+
 
       .js-methods {
         border: none;
@@ -150,7 +182,7 @@
 
   <body>
 
-    <div class="content">
+    <div class="content-vimeo">
       <iframe title="vimeo-player" src="https://player.vimeo.com/video/383357413?autoplay=1&loop=1&autopause=0&controls=0" width="1280" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
     </div>
 
