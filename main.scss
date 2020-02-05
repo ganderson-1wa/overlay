@@ -1,0 +1,174 @@
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
+
+.link-video {
+  display: inline-flex;
+  background: rgba(7, 71, 113, .75);
+  color: white;
+  padding: 2px 16px;
+  margin: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-family: sans-serif;
+
+    i {
+      font-size: 10px;
+      font-family: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
+      padding: 4px 6px;
+
+    }
+
+    &:hover {
+      background: rgba(7, 71, 113, 1.0) !important;
+      transition: background 0.2s ease-in;
+    }
+
+    &-restart {
+      @extend .link-video;
+      color: rgba(7, 71, 113, 1) !important;
+      background: rgba(7, 71, 113, .15) !important;
+
+      &:hover {
+        transition: background 0.2s ease-in;
+        color: rgba(7, 71, 113, 1) !important;
+        background: rgba(7, 71, 113, .3) !important;
+      }
+    }
+}
+
+.slider {
+-webkit-appearance: none;  
+appearance: none;
+width: 100% !important; 
+height: 16px; 
+margin: 20px 0;
+background: rgba(7, 71, 113, .15); 
+outline: none;
+opacity: 0.7; 
+-webkit-transition: .2s; 
+transition: opacity .2s;
+
+
+  &:hover {
+    opacity: 1; 
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 16px; 
+    height: 16px;
+    background: rgba(7, 71, 113, 1.0); 
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 16px; 
+    height: 16px; 
+    border-radius: 0;
+    background: rgba(7, 71, 113, 1); 
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+}
+ 
+.content-vimeo {
+  position: relative;
+  margin: 0 auto;
+  width: 720px;
+  height: 576px;
+
+  iframe {
+    display: block;
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url('grid.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 720px 576px;
+    opacity: .5;
+    width: 100% !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-zoom-01 {
+    @extend .content-vimeo;
+    width: 840px;
+    height: 672px;
+  
+    &:before {
+      background-size: 840px 672px;
+    }
+  }
+ 
+  &-zoom-02 {
+    @extend .content-vimeo;
+    width: 960px;
+    height: 768px;
+  
+    &:before {
+      background-size: 960px 768px;
+    }
+  }
+  
+}
+
+
+// Required to override styling from Vimeo API
+.js-methods {
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.controls {
+  display:flex;
+  min-width: 720px;
+  width: 100% !important;
+  align-items: center;
+
+    &-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-left{
+      flex:0 0 auto;
+    }
+    
+    &-center{
+      flex:1;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    &-right{
+      flex: 0 0 auto
+    }
+
+    &-zoom-01 {
+      @extend .controls;
+      min-width: 840px;
+    }
+    
+    &-zoom-02 {
+      @extend .controls;
+      min-width: 960px;
+    }
+
+}
+

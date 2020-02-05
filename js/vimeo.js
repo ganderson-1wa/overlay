@@ -56,3 +56,25 @@ $(function() {
     });
 
 });
+
+$('#zoom-01').bind('click', function () {
+    var zoomLevel1 = $('.content-vimeo');
+    var zoomLevel2 = $('.content-vimeo-zoom-02');
+    
+    if (zoomLevel1)
+    zoomLevel1.removeClass('content-vimeo').addClass('content-vimeo-zoom-01');
+    if (zoomLevel2)
+    zoomLevel2.removeClass('content-vimeo-zoom-02').addClass('content-vimeo');
+    
+});
+
+$('#zoom-02').bind('click', function () {
+    var zoomLevel1 = $('.content-vimeo-zoom-01');
+    var zoomLevel2 = $('.content-vimeo');
+
+    if (zoomLevel2)
+        zoomLevel2.removeClass('content-vimeo').addClass('content-vimeo-zoom-02');
+    if (zoomLevel1)
+    zoomLevel1.removeClass('content-vimeo-zoom-01').addClass('content-vimeo');
+
+});
