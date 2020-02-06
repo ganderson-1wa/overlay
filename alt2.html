@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Vimeo</title>
+
+  <head>
+
+      <link rel="stylesheet" href="main2.css">
+
+  </head>
+
+  <body>
+
+    <div class="content-vimeo" id="vimeo">
+      <iframe title="vimeo-player" src="https://player.vimeo.com/video/389371182?autoplay=1&loop=1&controls=0&background=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" autoplay="" allowfullscreen="" data-ready="true"></iframe>
+    </div>
+
+    <div class="controls-container">
+      <fieldset class="js-methods">
+
+        <div class="controls">
+          <div class="controls-left">
+            <button id="play-button" class="js-method link-video" data-method="play"><i class="fas fa-play"></i></button>
+            <button id="pause-button" class="js-method link-video" data-method="pause"><i class="fas fa-pause"></i></button>
+          </div>
+          <div class="controls-center">
+            <input id="current-time-range" type="range" min="1" max="100" value="0" class="slider">
+          </div>
+          <div class="controls-right">
+            <input id="current-time-input" type="hidden" value="0">
+            <button id="current-time-button" class="link-video-restart"><i class="fas fa-undo"></i></button>
+          </div>
+        </div>
+ 
+        <button id="zoom-00" class="link-video">1 X</button>
+        <button id="zoom-01" class="link-video">1.2 X</button>
+        <button id="zoom-02" class="link-video">1.5 X</button>
+      
+      </fieldset>
+
+
+    </div>
+
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/vimeo.js"></script>
+
+  </body>
+  
+</html>

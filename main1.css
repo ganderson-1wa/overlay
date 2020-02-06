@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
+.link-video, .link-video-restart {
+  display: inline-flex;
+  background: rgba(7, 71, 113, 0.75);
+  color: white;
+  padding: 2px 16px;
+  margin: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-family: sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.link-video i, .link-video-restart i {
+  font-size: 10px;
+  font-family: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
+  padding: 4px 6px;
+}
+
+.link-video:hover, .link-video-restart:hover {
+  background: #074771 !important;
+  transition: background 0.2s ease-in;
+}
+
+.link-video-restart {
+  color: #074771 !important;
+  background: rgba(7, 71, 113, 0.15) !important;
+}
+
+.link-video-restart:hover {
+  transition: background 0.2s ease-in;
+  color: #074771 !important;
+  background: rgba(7, 71, 113, 0.3) !important;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100% !important;
+  height: 16px;
+  margin: 20px 0;
+  background: rgba(7, 71, 113, 0.15);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #074771;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  background: #074771;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.content-vimeo, .content-vimeo-zoom-01, .content-vimeo-zoom-02 {
+  position: relative;
+  margin: 0 auto;
+  width: 720px;
+  height: 576px;
+}
+
+.content-vimeo iframe, .content-vimeo-zoom-01 iframe, .content-vimeo-zoom-02 iframe {
+  display: block;
+  width: 100%;
+}
+
+.content-vimeo:before, .content-vimeo-zoom-01:before, .content-vimeo-zoom-02:before {
+  content: '';
+  position: absolute;
+  background-image: url("grid1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 720px 576px;
+  opacity: .5;
+  width: 100% !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.content-vimeo-zoom-01 {
+  width: 840px;
+  height: 672px;
+}
+
+.content-vimeo-zoom-01:before {
+  background-size: 840px 672px;
+}
+
+.content-vimeo-zoom-02 {
+  width: 960px;
+  height: 768px;
+}
+
+.content-vimeo-zoom-02:before {
+  background-size: 960px 768px;
+}
+
+.js-methods {
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.controls, .controls-zoom-01, .controls-zoom-02 {
+  display: flex;
+  min-width: 720px;
+  width: 100% !important;
+  align-items: center;
+}
+
+.controls-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.controls-left {
+  flex: 0 0 auto;
+}
+
+.controls-center {
+  flex: 1;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.controls-right {
+  flex: 0 0 auto;
+}
+
+.controls-zoom-01 {
+  min-width: 840px;
+}
+
+.controls-zoom-02 {
+  min-width: 960px;
+}
