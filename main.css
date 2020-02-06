@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
-.link-video, .link-video-restart {
+.link-video, .link-video-hilite, .link-video-restart {
   display: inline-flex;
   background: rgba(7, 71, 113, 0.75);
   color: white;
@@ -19,13 +19,17 @@
   user-select: none;
 }
 
-.link-video i, .link-video-restart i {
+.link-video-hilite {
+  background: #59b8b8;
+}
+
+.link-video i, .link-video-hilite i, .link-video-restart i {
   font-size: 10px;
   font-family: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
   padding: 4px 6px;
 }
 
-.link-video:hover, .link-video-restart:hover {
+.link-video:hover, .link-video-hilite:hover, .link-video-restart:hover {
   background: #074771 !important;
   transition: background 0.2s ease-in;
 }
@@ -92,7 +96,7 @@
 .content-vimeo:before, .content-vimeo-zoom-01:before, .content-vimeo-zoom-02:before {
   content: '';
   position: absolute;
-  background-image: url("grid.png");
+  background-image: url("grid1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 720px 576px;

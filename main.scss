@@ -20,6 +20,11 @@
   -ms-user-select: none;
   user-select: none; 
 
+  &-hilite {
+    @extend .link-video;
+    background: rgba(89, 184, 184,1);
+  }
+
     i {
       font-size: 10px;
       font-family: "Font Awesome 5 Free", "FontAwesome", "Material Icons";

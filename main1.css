@@ -19,13 +19,17 @@
   user-select: none;
 }
 
-.link-video i, .link-video-restart i {
+.link-video-hilite {
+  background: #59b8b8;
+}
+
+.link-video i, .link-video-hilite i, .link-video-restart i {
   font-size: 10px;
   font-family: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
   padding: 4px 6px;
 }
 
-.link-video:hover, .link-video-restart:hover {
+.link-video:hover, .link-video-hilite:hover, .link-video-restart:hover {
   background: #074771 !important;
   transition: background 0.2s ease-in;
 }
