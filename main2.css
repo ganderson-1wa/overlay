@@ -96,6 +96,7 @@
 .content-vimeo:before, .content-vimeo-zoom-01:before, .content-vimeo-zoom-02:before {
   content: '';
   position: absolute;
+  pointer-events: none !important;
   background-image: url("grid2.png");
   background-repeat: no-repeat;
   background-position: center center;
