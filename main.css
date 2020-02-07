@@ -97,7 +97,7 @@
   content: '';
   position: absolute;
   pointer-events: none !important;
-  background-image: url("grid1.png");
+  background-image: url("grid.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 720px 576px;
